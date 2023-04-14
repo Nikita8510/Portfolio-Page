@@ -1,0 +1,99 @@
+.about{
+    padding-top: 120px;
+    &__wrapper{
+        display: grid;
+    grid-template-columns: 400px 638px;
+    grid-template-rows: minmax(245px,auto);
+    grid-auto-rows: minmax(245px,auto);
+    column-gap: 70px;
+    row-gap: 40px;
+    }
+    &__photo{
+        grid-row: 1/3;
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__descr{
+        border-radius: 5px 5px 5px 5px;
+        padding: 15px 70px;
+        box-shadow: 7px 1px 17px 2px rgba(190, 195, 199, 0.42);
+    }
+    &__skills{
+            display: grid;
+            grid-template: repeat(2,minmax(115px,auto))/repeat(2,260px);
+            grid-auto-rows: 1fr;
+            column-gap: 50px;
+            row-gap: 20px;
+        &-item{
+            display: grid;
+            align-items: flex-start;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+            padding: 10px;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 7px 1px 17px 2px rgba(190, 195, 199, 0.42);
+        }
+        &-title{
+            margin-bottom: 10px;
+            
+        }
+        &-text{
+           
+         padding: 0px 40px 10px 0px;
+        }
+        
+    }
+    &__text{
+        span{
+            color: rgb(0, 153, 255);
+        }
+    }
+}
+
+
+
+//  media
+@media (max-width: 1200px){
+    .about__wrapper {
+        grid-template-columns: 400px 520px;
+        column-gap: 40px;
+    }
+
+}
+@media (max-width: 992px){
+   
+    .about{
+
+        &__skills {
+         grid-template-columns: 100%;
+         grid-auto-rows: minmax(115px,auto);
+         &-item{
+            grid-template-columns: 40px 345px;
+         }
+         
+     }
+    }
+    .about__wrapper {
+     justify-content: center;
+     grid-template-columns: 340px 380px;
+    }
+
+}
+@media (max-width: 768px){
+    .about__wrapper {
+        grid-template: 447px auto auto/1fr;
+    }
+
+}
+@media (max-width: 350px){
+    .about__skills-item {
+        grid-template-columns: 42px 211px;
+    }
+    .about__descr {
+      
+        padding: 15px 15px;
+      
+    }
+}
+
